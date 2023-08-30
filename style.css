@@ -62,7 +62,7 @@ form button[type="submit"]:hover, .recipe button:hover,.recipe-close-btn:hover{
 .recipe-container{
     text-align: center;
     margin: 10px auto;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     width: 80%;
@@ -71,11 +71,8 @@ form button[type="submit"]:hover, .recipe button:hover,.recipe-close-btn:hover{
     flex-direction: column;
 }
 
-.recipe-container img{
-    /* text-align: center;
-    flex-direction: column; */
-    width: 95%;
-}
+
+
 
 .error img{
     margin-top: 30px;
