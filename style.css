@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #c70922;
+    color: rgba(238, 223, 93, 0.973);
+}
+
+header nav{
+    background-color: #630202;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 50px;
+    letter-spacing: 0px;
+
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+
+}
+
+form input{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+form input[type="text"],button[type="submit"]{
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+form button[type="submit"]{
+    background-color: #bd0303;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover, .recipe button:hover,.recipe-close-btn:hover{
+    background-color: #e74d4d;
+    transform: scale(1.1);
+    /* box-shadow: #11be2e 2 5 10 0; */
+}
+
+
+/* main section styling */
+
+.recipe-container{
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    padding: 20px;
+    place-items: center;
+    flex-direction: column;
+}
+
+.recipe-container img{
+    /* text-align: center;
+    flex-direction: column; */
+    width: 95%;
+}
+
+.error img{
+    margin-top: 30px;
+}
+
+.recipe{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(73, 78, 78, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.recipe:hover{
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.recipe img{
+    height: 250px;
+}
+
+.recipe h3{
+    font-size: 26px;
+    margin-block: 5px;
+
+}
+
+.recipe p{
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.recipe span{
+    font-weight: 700;
+}
+
+.recipe button{
+    font-size: 21px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #bd0303;
+    color: #fff;
+    border: none;
+}
+
+
+.recipe-review{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #630202;
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    font-size: 22px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+
+}
+
+.recipe-details-content{
+    padding: 30px;
+}
+
+.recipe-name{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.ingredient-lists{
+    margin-top: 10px;
+    margin-left: 22px;
+}
+
+.instructions p{
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipe-name,.ingredient-lists,.instructions{
+    margin-bottom: 15px;
+}
+
+.recipe-close-btn{
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #bd0303;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: aliceblue;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* Adding scroll bar to recipe review */
+.recipe-review::-webkit-scrollbar{
+    width: 10px;
+
+}
+
+.recipe-review::-webkit-scrollbar-thumb{
+    background-color: rgb(167, 167, 161);
+    border-radius: 10px;
+    --webkit-border-radius: 16px;
+}
+.recipe-review::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+body::-webkit-scrollbar{
+    width: 16px;
+
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(194, 194, 183);
+    /* border-radius: 16px; */
+    --webkit-border-radius: 16px;
+}
+body::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* creating media query for responsive screen */
+@media screen and (max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 15px;
+    }
+}
